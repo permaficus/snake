@@ -24,7 +24,6 @@ grid = {
 	get: function(x, y) { return this.grid_[x][y];}
 }
 
-
 snake = {
 
 	direction: null, 
@@ -45,7 +44,6 @@ snake = {
 
 	remove: function() {return this.queue_.pop();}
 };
-
 
 setFood = () => {
 	let empty_ = [];
@@ -105,7 +103,6 @@ loop = () => {
 	window.requestAnimationFrame(loop, canvas);
 }
 
-
 update = () => {
 	frames++;
 		
@@ -122,7 +119,6 @@ update = () => {
 		snake.direction = down;
 	}
 
-	
 	if (frames%7 === 0) {
 		
 		let nx = snake.last.x, ny = snake.last.y;
@@ -176,6 +172,3 @@ draw = () => {
 	ctx.fillStyle = "#000";
 	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
 }
-
-
-// main();
