@@ -75,11 +75,11 @@ main = () => {
 	frames = 0;
 	keystate = {};
 	
-	document.addEventListener("keydown", evt => {
-		keystate[evt.keyCode] = true;
+	document.addEventListener("keydown", el => {
+		keystate[el.keyCode] = true;
 	});
-	document.addEventListener("keyup", evt => {
-		delete keystate[evt.keyCode];
+	document.addEventListener("keyup", el => {
+		delete keystate[el.keyCode];
 	});
 	
 	init();
